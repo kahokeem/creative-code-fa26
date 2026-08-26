@@ -1,0 +1,14 @@
+body {
+    background: rgb(255, 255, 166);
+   
+}
+
+img {
+    width: 50vw;
+}
+
+p{
+    font-size: 60px;
+    color: blue;
+    border: 10px dashed magenta;
+}
