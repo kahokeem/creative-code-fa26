@@ -5,7 +5,8 @@ function setup () {
 function draw () {
     // background(200)
     rectMode(CENTER)
-    rect(mouseX,mouseY, 50, 50)
+    circle(mouseX,mouseY, 50)
+    fill 
 }
 
 function windowResized() {
@@ -13,3 +14,4 @@ function windowResized() {
     (windowWidth,
     windowHeight)
 }
+
