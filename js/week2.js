@@ -23,7 +23,7 @@ function draw () {
   if (x>width+size/2) {
     x=size/2;
     y=random(height)}
-    fill(random(255), random(255), random(255));
+    fill(random(255), random(255), random(255), random(70));
 
     y = y + speed;
    if (y > height + size / 2) {
