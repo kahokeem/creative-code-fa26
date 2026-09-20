@@ -1,10 +1,12 @@
 body {
     margin: 0;
-    background-color: #f0f0f0;
-
+    background-color: black;
+    font-family:ITC Franklin Gothic Std, sans-serif;
+    color: white;
+    /* margin: 120; */
 }
 
 canvas {
     display: block;
-    
+    margin: 0 auto
 }
