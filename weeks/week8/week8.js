@@ -42,28 +42,28 @@ function setup() {
     }
     
     //audiences
-    // 2층
+    // 1st floor 
     makeAudienceSection(
     30, 70, 670, 70,
     20, 150, 680, 150,
     3, 7
     )
 
-    // 1층: 무대 앞쪽
+    // 1st floor: middle
     makeAudienceSection(
     90, 200, 620, 200,
     310, 335, 510, 335,
     4, 10
     )
 
-    // 1층: 무대 왼쪽
+    // 1st floor: left side of the stage
     makeAudienceSection(
     20, 290, 330, 400,
     10, 485, 45, 485,
     5, 16
     )
 
-    // 1층: 무대 오른쪽
+    // 1st floor: right side of the stage
     makeAudienceSection(
     465, 350, 650, 290,
     380, 485, 690, 485,
@@ -82,11 +82,11 @@ fill(255)
 for (let i = 0; i < audiences.length; i++) {
   let person = audiences[i]
 
-  // 점프 속도와 위치 업데이트
+
   person.velocityY += 0.5
   person.y += person.velocityY
 
-  // 바닥에 닿으면
+//touch the ground
   if (person.y >= person.groundY) {
     person.y = person.groundY
 
@@ -270,6 +270,7 @@ function mouseMoved() {
 
 //! means opposite state so this means when flashing(default false) is false, opposite is flashing true.
 
+
 function makeAudienceSection(
   backLeftX, backLeftY,
   backRightX, backRightY,
@@ -285,6 +286,9 @@ function makeAudienceSection(
   ) < 180
 
   for (let row = 0; row < rows; row++) {
+    
+    
+    //depth (will be decreased) gradually from back to front
     let depth = row / (rows - 1)
 
     let leftX = lerp(backLeftX, frontLeftX, depth)
